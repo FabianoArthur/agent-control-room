@@ -11,7 +11,7 @@ import { Orders } from './ui/Orders';
 import { Stats } from './ui/Stats';
 
 const LINES_PER_AGENT = 4;
-const REPO_URL = 'https://github.com/FabianoArthur/Calculadora';
+const REPO_URL = 'https://github.com/FabianoArthur/agent-control-room';
 
 const readParams = (): SimParams => parseParams(typeof location === 'undefined' ? '' : location.search);
 

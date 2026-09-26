@@ -2,8 +2,8 @@
 
 [English](README.md) · **Português (Brasil)**
 
-[![CI](https://github.com/FabianoArthur/Calculadora/actions/workflows/ci.yml/badge.svg)](https://github.com/FabianoArthur/Calculadora/actions/workflows/ci.yml)
-[![Deploy](https://github.com/FabianoArthur/Calculadora/actions/workflows/deploy.yml/badge.svg)](https://github.com/FabianoArthur/Calculadora/actions/workflows/deploy.yml)
+[![CI](https://github.com/FabianoArthur/agent-control-room/actions/workflows/ci.yml/badge.svg)](https://github.com/FabianoArthur/agent-control-room/actions/workflows/ci.yml)
+[![Deploy](https://github.com/FabianoArthur/agent-control-room/actions/workflows/deploy.yml/badge.svg)](https://github.com/FabianoArthur/agent-control-room/actions/workflows/deploy.yml)
 [![Licença: MIT](https://img.shields.io/badge/licen%C3%A7a-MIT-blue.svg)](LICENSE)
 
 Uma sala de controle para agentes de código trabalhando em paralelo. Você coloca pedidos numa
@@ -14,8 +14,8 @@ Quando um agente trava, ele para e chama você.
 Tudo roda no navegador a partir de uma **simulação determinística com seed**. Não há backend nem
 chave de API, e a mesma seed sempre repete a mesma execução.
 
-**Demo ao vivo:** <https://fabianoarthur.github.io/Calculadora/>
-(veja uma execução compartilhada: [`?seed=2026&t=113`](https://fabianoarthur.github.io/Calculadora/?seed=2026&t=113))
+**Demo ao vivo:** <https://fabianoarthur.github.io/agent-control-room/>
+(veja uma execução compartilhada: [`?seed=2026&t=113`](https://fabianoarthur.github.io/agent-control-room/?seed=2026&t=113))
 
 ![Agent Control Room: quatro agentes trabalhando pedidos em paralelo, um pausado esperando você](docs/assets/demo.gif)
 
