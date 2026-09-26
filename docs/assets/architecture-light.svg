@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" width="880" height="560" role="img" aria-labelledby="title desc" lang="en">
+<title id="title">How Agent Control Room works</title>
+<desc id="desc">You add an order; it waits in a FIFO queue. The scheduler hands it to a free agent (at most N run in parallel), which gets its own branch and git worktree and moves through plan, code, gates (typecheck, lint, tests) and review until a pull request opens. A failing gate sends the agent back to code once; an ambiguous spec or a gate that keeps failing pauses it on 'needs you' until you (or the autopilot) unblock it. A clock dispatches a tick every 800 ms to a pure reducer whose PRNG state lives inside the simulation, so a seed replays the same run. React renders the state.</desc>
+<style>text{font-family:ui-sans-serif, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif;fill:#18181b}.t{font-size:14px}.b{font-size:14.5px;font-weight:650}.m{font-size:12.5px;fill:#5f5f6b}.h{font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;fill:#5f5f6b}.code{font-family:ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;, monospace;font-size:12.5px;fill:#5f5f6b}.bg{fill:#ffffff;stroke:#e2e2e8}.card{fill:#ffffff;stroke:#cfcfd8}.zone{fill:#f7f7f9;stroke:#dcdce3;stroke-dasharray:6 5}.acc{fill:#fff1e8;stroke:#f0b58f}.acct{fill:#c2410c}.warn{fill:#fff7e0;stroke:#e9c46a}.warnt{fill:#a15c07}.ok{fill:#ecfdf3;stroke:#8fd3a8}.okt{fill:#15803d}.e{fill:none;stroke:#8a8a96;stroke-width:1.5;stroke-linejoin:round}.ed{fill:none;stroke:#8a8a96;stroke-width:1.5;stroke-dasharray:4 4;stroke-linejoin:round}.dot{fill:#c2410c}.halo{fill:#c2410c;opacity:.25}.hl{fill:none;stroke:#c2410c;stroke-width:2;stroke-linejoin:round;opacity:0}.pk{opacity:0}@keyframes p0{0%,0.00%{opacity:0;transform:translate(560px,52px)}0.00%{opacity:1;transform:translate(560px,52px)}7.00%{opacity:1;transform:translate(420px,52px)}9.00%,100%{opacity:0;transform:translate(420px,52px)}}.p0{animation:p0 11s linear infinite}@keyframes h0{0%,0.00%{opacity:0}0.00%,7.00%{opacity:.9}13.00%,100%{opacity:0}}.h0{animation:h0 11s linear infinite}@keyframes p1{0%,7.99%{opacity:0;transform:translate(330px,80px)}8.00%{opacity:1;transform:translate(330px,80px)}14.00%{opacity:1;transform:translate(330px,150px)}16.00%,100%{opacity:0;transform:translate(330px,150px)}}.p1{animation:p1 11s linear infinite}@keyframes h1{0%,7.00%{opacity:0}8.00%,14.00%{opacity:.9}20.00%,100%{opacity:0}}.h1{animation:h1 11s linear infinite}@keyframes p2{0%,14.99%{opacity:0;transform:translate(330px,200px)}15.00%{opacity:1;transform:translate(330px,200px)}15.84%{opacity:1;transform:translate(330px,226px)}22.84%{opacity:1;transform:translate(113px,226px)}24.00%{opacity:1;transform:translate(113px,262px)}26.00%,100%{opacity:0;transform:translate(113px,262px)}}.p2{animation:p2 11s linear infinite}@keyframes h2{0%,14.00%{opacity:0}15.00%,24.00%{opacity:.9}30.00%,100%{opacity:0}}.h2{animation:h2 11s linear infinite}@keyframes p3{0%,24.99%{opacity:0;transform:translate(178px,290px)}25.00%{opacity:1;transform:translate(178px,290px)}29.00%{opacity:1;transform:translate(208px,290px)}31.00%,100%{opacity:0;transform:translate(208px,290px)}}.p3{animation:p3 11s linear infinite}@keyframes h3{0%,24.00%{opacity:0}25.00%,29.00%{opacity:.9}35.00%,100%{opacity:0}}.h3{animation:h3 11s linear infinite}@keyframes p4{0%,29.99%{opacity:0;transform:translate(338px,290px)}30.00%{opacity:1;transform:translate(338px,290px)}34.00%{opacity:1;transform:translate(368px,290px)}36.00%,100%{opacity:0;transform:translate(368px,290px)}}.p4{animation:p4 11s linear infinite}@keyframes h4{0%,29.00%{opacity:0}30.00%,34.00%{opacity:.9}40.00%,100%{opacity:0}}.h4{animation:h4 11s linear infinite}@keyframes p5{0%,34.99%{opacity:0;transform:translate(528px,290px)}35.00%{opacity:1;transform:translate(528px,290px)}39.00%{opacity:1;transform:translate(558px,290px)}41.00%,100%{opacity:0;transform:translate(558px,290px)}}.p5{animation:p5 11s linear infinite}@keyframes h5{0%,34.00%{opacity:0}35.00%,39.00%{opacity:.9}45.00%,100%{opacity:0}}.h5{animation:h5 11s linear infinite}@keyframes p6{0%,39.99%{opacity:0;transform:translate(688px,290px)}40.00%{opacity:1;transform:translate(688px,290px)}44.00%{opacity:1;transform:translate(718px,290px)}46.00%,100%{opacity:0;transform:translate(718px,290px)}}.p6{animation:p6 11s linear infinite}@keyframes h6{0%,39.00%{opacity:0}40.00%,44.00%{opacity:.9}50.00%,100%{opacity:0}}.h6{animation:h6 11s linear infinite}@keyframes p7{0%,49.99%{opacity:0;transform:translate(440px,410px)}50.00%{opacity:1;transform:translate(440px,410px)}57.00%{opacity:1;transform:translate(440px,452px)}59.00%,100%{opacity:0;transform:translate(440px,452px)}}.p7{animation:p7 11s linear infinite}@keyframes h7{0%,49.00%{opacity:0}50.00%,57.00%{opacity:.9}63.00%,100%{opacity:0}}.h7{animation:h7 11s linear infinite}@keyframes p8{0%,63.99%{opacity:0;transform:translate(470px,262px)}64.00%{opacity:1;transform:translate(470px,262px)}68.26%{opacity:1;transform:translate(470px,173px)}72.00%{opacity:1;transform:translate(548px,173px)}74.00%,100%{opacity:0;transform:translate(548px,173px)}}.p8{animation:p8 11s linear infinite}@keyframes h8{0%,63.00%{opacity:0}64.00%,72.00%{opacity:.9}78.00%,100%{opacity:0}}.h8{animation:h8 11s linear infinite}@keyframes p9{0%,72.99%{opacity:0;transform:translate(640px,150px)}73.00%{opacity:1;transform:translate(640px,150px)}79.00%{opacity:1;transform:translate(640px,74px)}81.00%,100%{opacity:0;transform:translate(640px,74px)}}.p9{animation:p9 11s linear infinite}@keyframes h9{0%,72.00%{opacity:0}73.00%,79.00%{opacity:.9}85.00%,100%{opacity:0}}.h9{animation:h9 11s linear infinite}@keyframes p10{0%,80.99%{opacity:0;transform:translate(560px,196px)}81.00%{opacity:1;transform:translate(560px,196px)}82.17%{opacity:1;transform:translate(560px,242px)}89.49%{opacity:1;transform:translate(273px,242px)}90.00%{opacity:1;transform:translate(273px,262px)}92.00%,100%{opacity:0;transform:translate(273px,262px)}}.p10{animation:p10 11s linear infinite}@keyframes h10{0%,80.00%{opacity:0}81.00%,90.00%{opacity:.9}96.00%,100%{opacity:0}}.h10{animation:h10 11s linear infinite}@keyframes pr{0%,43%{opacity:0}46%,58%{opacity:1}66%,100%{opacity:0}}.prglow{fill:none;stroke:#c2410c;stroke-width:2;opacity:0;animation:pr 11s linear infinite}@keyframes nu{0%,70%{opacity:0}73%,86%{opacity:1}92%,100%{opacity:0}}.nuglow{fill:none;stroke:#a15c07;stroke-width:2;opacity:0;animation:nu 11s linear infinite}@media (prefers-reduced-motion:reduce){.pk,.hl,.prglow,.nuglow{animation:none;display:none}}</style>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#8a8a96"/></marker></defs>
+<rect x="0.5" y="0.5" width="879" height="559" rx="16" class="bg"/>
+<rect x="40" y="30" width="192" height="44" rx="10" class="card"/>
+<text x="56" y="57"><tspan class="b">clock</tspan><tspan class="m" dx="8">tick every 800 ms</tspan></text>
+<rect x="240" y="24" width="180" height="56" rx="10" class="card"/>
+<text x="330" y="48" class="b" text-anchor="middle">order queue</text>
+<text x="330" y="67" class="m" text-anchor="middle">FIFO</text>
+<rect x="560" y="30" width="160" height="44" rx="22" class="card"/>
+<text x="640" y="57" text-anchor="middle"><tspan class="b">you</tspan><tspan class="m" dx="8">browser</tspan></text>
+<rect x="24" y="120" width="832" height="290" rx="14" class="zone"/>
+<text x="44" y="143"><tspan class="h">simulation engine</tspan></text>
+<text x="836" y="398" class="code" text-anchor="end">pure TypeScript: reduce(state, action)</text>
+<rect x="240" y="150" width="180" height="50" rx="10" class="card"/>
+<text x="330" y="171" class="b" text-anchor="middle">scheduler</text>
+<text x="330" y="189" class="m" text-anchor="middle">max N agents in parallel</text>
+<rect x="548" y="150" width="184" height="46" rx="10" class="warn"/>
+<rect x="545" y="147" width="190" height="52" rx="12" class="nuglow"/>
+<text x="640" y="170" class="b warnt" text-anchor="middle">needs you</text>
+<text x="640" y="187" class="m" text-anchor="middle" style="font-size:11px">you unblock, or autopilot does</text>
+<rect x="742" y="150" width="106" height="46" rx="10" class="card"/>
+<text x="795" y="170" class="b" text-anchor="middle" style="font-size:13px">seeded PRNG</text>
+<text x="795" y="187" class="code" text-anchor="middle" style="font-size:11px">?seed=</text>
+<rect x="48" y="262" width="130" height="56" rx="10" class="card"/>
+<text x="113.0" y="295" class="b" text-anchor="middle">plan</text>
+<rect x="208" y="262" width="130" height="56" rx="10" class="card"/>
+<text x="273.0" y="295" class="b" text-anchor="middle">code</text>
+<rect x="368" y="262" width="160" height="56" rx="10" class="card"/>
+<text x="448.0" y="286" class="b" text-anchor="middle">gates</text>
+<text x="448.0" y="305" class="m" text-anchor="middle" style="font-size:11.5px">typecheck, lint, tests</text>
+<rect x="558" y="262" width="130" height="56" rx="10" class="card"/>
+<text x="623.0" y="295" class="b" text-anchor="middle">review</text>
+<rect x="718" y="262" width="122" height="56" rx="10" class="ok"/>
+<rect x="715" y="259" width="128" height="62" rx="12" class="prglow"/>
+<text x="779" y="286" class="b okt" text-anchor="middle">PR opened</text>
+<text x="779" y="305" class="code" text-anchor="middle">feat/&lt;slug&gt;</text>
+<path d="M448,318 V352 H273 V318" class="ed" marker-end="url(#ah)"/>
+<text x="360" y="372" class="m" text-anchor="middle">gate fails: fix and retry</text>
+<rect x="24" y="452" width="832" height="84" rx="14" class="card"/>
+<text x="44" y="480"><tspan class="b">React UI</tspan><tspan class="m" dx="8">renders every state change</tspan></text>
+<rect x="44" y="494" width="62" height="28" rx="14" class="acc"/>
+<text x="75.0" y="512.5" class="t acct" text-anchor="middle" style="font-size:13px">stats</text>
+<rect x="116.0" y="494" width="108" height="28" rx="14" class="acc"/>
+<text x="169.8" y="512.5" class="t acct" text-anchor="middle" style="font-size:13px">agent cards</text>
+<rect x="233.6" y="494" width="123" height="28" rx="14" class="acc"/>
+<text x="295.0" y="512.5" class="t acct" text-anchor="middle" style="font-size:13px">queue and PRs</text>
+<rect x="366.4" y="494" width="85" height="28" rx="14" class="acc"/>
+<text x="408.8" y="512.5" class="t acct" text-anchor="middle" style="font-size:13px">activity</text>
+<text x="452" y="436" class="m">state</text>
+<path d="M560,52 L420,52" class="e" marker-end="url(#ah)"/>
+<path d="M115,74 L115,120" class="e" marker-end="url(#ah)"/>
+<path d="M330,80 L330,150" class="e" marker-end="url(#ah)"/>
+<path d="M330,200 L330,226 L113,226 L113,262" class="e" marker-end="url(#ah)"/>
+<path d="M178,290 L208,290" class="e" marker-end="url(#ah)"/>
+<path d="M338,290 L368,290" class="e" marker-end="url(#ah)"/>
+<path d="M528,290 L558,290" class="e" marker-end="url(#ah)"/>
+<path d="M688,290 L718,290" class="e" marker-end="url(#ah)"/>
+<path d="M440,410 L440,452" class="e" marker-end="url(#ah)"/>
+<path d="M470,262 L470,173 L548,173" class="ed" marker-end="url(#ah)"/>
+<path d="M150,262 L150,212 L620,212 L620,196" class="ed" marker-end="url(#ah)"/>
+<path d="M640,150 L640,74" class="ed" marker-end="url(#ah)"/>
+<path d="M560,196 L560,242 L273,242 L273,262" class="ed" marker-end="url(#ah)"/>
+<text x="490" y="44" class="m" text-anchor="middle">add order</text>
+<path d="M560,52 L420,52" class="hl h0"/>
+<g class="pk p0"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<path d="M330,80 L330,150" class="hl h1"/>
+<g class="pk p1"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<path d="M330,200 L330,226 L113,226 L113,262" class="hl h2"/>
+<g class="pk p2"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<path d="M178,290 L208,290" class="hl h3"/>
+<g class="pk p3"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<path d="M338,290 L368,290" class="hl h4"/>
+<g class="pk p4"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<path d="M528,290 L558,290" class="hl h5"/>
+<g class="pk p5"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<path d="M688,290 L718,290" class="hl h6"/>
+<g class="pk p6"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<path d="M440,410 L440,452" class="hl h7"/>
+<g class="pk p7"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<path d="M470,262 L470,173 L548,173" class="hl h8"/>
+<g class="pk p8"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<path d="M640,150 L640,74" class="hl h9"/>
+<g class="pk p9"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<path d="M560,196 L560,242 L273,242 L273,262" class="hl h10"/>
+<g class="pk p10"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+</svg>
